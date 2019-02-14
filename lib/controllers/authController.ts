@@ -65,8 +65,8 @@ export class AuthController{
                         let userCredential = { "_id": authdetails._id };        
                         let newvalues  = { $set: { jwttoken: token, refreshtoken: refreshtoken } };
                         Auth.findOneAndUpdate(userCredential, newvalues,{new : true} ); //Details get updated in the Database
-            
-                        response = apiResponse.getResponse(true, token, "Login Sucessfull", 200);
+                        let data = {"token": token, "refreshtoken": refreshtoken}
+                        response = apiResponse.getResponse(true, data, "Login Sucessfull", 200);
                         resolve(response);
                     });
                 }else{
@@ -86,8 +86,9 @@ export class AuthController{
                         let auth = new Auth(authdetails);
             
                         auth.save(); //Details get saved in the Database
-            
-                        response = apiResponse.getResponse(true, token, "Login Sucessfull", 200);
+                        
+                        let data = {"token": token, "refreshtoken": refreshtoken}
+                        response = apiResponse.getResponse(true, data, "Login Sucessfull", 200);
                         resolve(response);
                     });
                 }
