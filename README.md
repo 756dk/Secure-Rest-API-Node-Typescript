@@ -1,6 +1,6 @@
 # Building Secure RESTful Web API's with Node.js, Express, MongoDB and TypeScript
 
-This is a simple API that saves contact information of people. 
+This is a simple API with JWT authentication
 
 ## Requirements
 
