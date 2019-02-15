@@ -1,4 +1,4 @@
-# Building Secure RESTful Web API's with Node.js, Express, MongoDB and TypeScript
+# Building Secure RESTful Web API's with Node.js, Express, MongoDB and TypeScript using JSON WEB TOKEN
 
 This is a simple API with JWT authentication
 
@@ -15,6 +15,10 @@ npm install -g typescript ts-node
 You should install [MongoDB](https://docs.mongodb.com/manual/administration/install-community/) on your local machine, or use other services such as [mLab](https://mlab.com/) or [Compose](https://www.compose.com/compare/mongodb)
 
 After that, you will have to replace the mongoURL with your MongoDB address in *lib/app.ts*
+
+## Install Packages
+
+npm install
 
 ## Start the server
 
